@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    height: 800px;
+    margin: auto;
+    background-image: linear-gradient(45deg,#385898,#5dabd3);
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: #5dabd3;
+    display: flex;
+    justify-content: space-between;
+}
+.header .aghiwhmy{
+    width: 200px;
+    height: 100px;
+    padding-left: 20px;
+}
+.header_login {
+    width: 40%;
+    height: 100px;
+    display: flex;
+    margin-right: 20px;
+}
+.header_login .header_login-item .label{
+    width: 100%;
+    display: block;
+    padding-bottom: 2px;
+}
+.header_login-item {
+    width: 100%;
+    height: 100px;
+    margin-right: 10px;
+    padding:6px 0;
+}
+.header_login .header_login-item .login{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+.header_login .header_login-item #checkbox{
+    width: 20px;
+    height: 20px;
+    margin: 10px 10px 0 0;
+}
+.header_login .header_login-item .check-item{
+    display: inline-block;
+    font-size: 12px;
+}
+.header_login-btn{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 25px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+}
+.header_login-btn:hover{
+    background-color: #385898;
+    color: #fff;
+}
+/* --------------------- phần Modal---------------------------- */
+
+.modal.open{
+    display: flex;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    animation: fadeIn linear 0.5s;
+    z-index: 100;
+}
+
+.modal_overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal_body{
+    --growth-from:0.7;
+    --growth-to:1;
+    width: 600px;
+    background-image: linear-gradient(to right,#99CCFF,#33CCFF);
+    margin: auto;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    animation: growth linear 0.2s;
+}
+/* Authen-modal */
+.auth-form{
+    width: 600px;
+}
+.auth-form_container{
+    padding: 0 32px;
+}
+.auth-form-close{
+    width: 100%;
+    height: 40px;
+    display: block;
+}
+.auth-form-close >i{
+    width:40px;
+    height: 40px;
+    float: right;
+   padding-top: 20px;
+   font-size: 20px;
+   text-align: center;
+   cursor: pointer;
+   
+}
+.auth-form_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.auth-form_heading{
+    font-size: 22px;
+    font-weight: 400;
+    
+}
+.auth-form_switch-btn{
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    color: rgb(74, 108, 242);
+}
+.auth-form_body{
+    margin-top: 10px;
+}
+.auth-form_input{
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.auth-form-radio{
+    width: 100%;
+    margin: 20px 0;
+    display: block;
+    align-items: center;
+}
+.auth-form-radio > input{
+    width: 20px;
+    height: 20px;
+}
+.auth-form-radio > label{
+    font-size: 20px;
+    font-weight: 400;
+}
+.auth-form_aside{
+    margin-top: 30px;
+}
+.auth-form_policy-text{
+    font-size: 16px;
+    font-weight: 400;
+}
+.auth-form_controls{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+}
+.auth-form_controls > input{
+    width: 48%;
+    height: 40px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+.auth-form-socials{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    background-color: #99CCFF;
+    border-radius: 4px;
+}
+.auth-form_logofbig{
+    width: 50%;
+    height: 50px;
+    display: flex;
+    background-color: #23194c;
+    align-items: center;
+    margin: auto 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.auth-form_logofbig:hover p{
+    background-color: aqua;
+    color: #23194c;
+}
+.auth-form_logofbig:hover .icon{
+  color:aqua;
+}
+.auth-form_logofbig .icon{
+    color: rgb(112, 163, 213);
+    font-size: 40px;
+    margin-right: 10px;
+    padding-left: 4px;
+}
+.auth-form_logofbig> p{
+    width: 100%;
+    font-size: 40px;
+    color: #fff;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}

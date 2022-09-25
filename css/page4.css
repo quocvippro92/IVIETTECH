@@ -1,0 +1,30 @@
+main{
+    display: flex;
+}
+main{
+    background-color: greenyellow;
+    height: 500px;
+}
+nav{
+    background-color: antiquewhite;
+}
+section{
+    background-color: aqua;
+}
+nav,aside{
+    flex-flow: 35%;
+}
+section{
+    flex-basis: 50%;
+}
+@media(max-width:600px){
+    main{
+        flex-direction: column;
+    }
+    section{
+        order: 1;
+    }
+    aside{
+        order: 2;
+    }
+}
